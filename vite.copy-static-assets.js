@@ -25,10 +25,7 @@ export default function copyStaticAssets() {
   return {
     name: 'copy-static-assets',
     closeBundle: async () => {
-      // Copy product images
-      await copyDir('src/assets/images/products', 'dist/assets/images/products');
-      // Copy brand images (favicons)
-      await copyDir('src/assets/images/brand', 'dist/assets/images/brand');
+      // Images now live in public/assets/images/ and are copied automatically by Vite
     },
   };
 }
